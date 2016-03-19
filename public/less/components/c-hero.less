@@ -1,0 +1,161 @@
+.c-hero {
+	position: relative;
+	overflow: hidden;
+	border-bottom: 2px solid #c2d8a9;
+	background: #f5f5f5 url(../images/c-hero--stage.png) no-repeat center bottom;
+	.remMb(40);
+
+	&:after {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		display: block;
+		content: "";
+		width: image-width("../images/c-hero--clouds.png")*3;
+		background: url(../images/c-hero--clouds.png);
+		animation-name: MOVE-BG;
+		-webkit-animation-name: MOVE-BG;
+	  animation-duration: 100s;
+	  animation-timing-function: linear;
+	  animation-iteration-count: infinite;
+	}
+
+	&__container {
+		height: 450px;
+		padding-top: 35px;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__flag {
+		position: absolute;
+		top: 30px;
+		bottom: 0;
+		left: -18px;
+		border-left: 2px solid #c9b290;
+		padding-left: 18px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: image-width("../images/c-hero--flag.png");
+			height: image-height("../images/c-hero--flag.png");
+			background: url(../images/c-hero--flag.png) no-repeat center center;
+		}
+
+		&-text {
+			width: 145px;
+			padding-top: 50px;
+			.fontSizer(14, 20);
+			font-weight: 300;
+
+			a {
+				color: red;
+			}
+		}
+	}
+
+	&__houses {
+		position: absolute;
+		bottom: -2px;
+		left: -30px;
+		right: 0;
+		text-align: center;
+	}
+
+	&__title {
+		text-align: center;
+		.fontSizer(50, 60);
+		font-family: @cursive-font-family;
+		
+	}
+
+	&__img {
+		display: inline-block;
+		vertical-align: bottom;
+		
+	}
+
+	&__house {
+		height: 220px;
+		position: relative;
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		width: 140px;
+		margin-left: 30px;
+		margin-right: -.25em;
+		text-decoration: none;
+	}
+
+	&__house:hover &__label {
+		color: @green;
+		text-decoration: underline;
+		
+	}
+
+	&__imgbox {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	&__house--1 &__img  {
+		margin-left: -10px;	
+	}
+
+	&__house--2 &__img  {
+		margin-left: -22px;	
+	}
+
+
+	&__house--3 &__img  {
+		margin-left: -11px;	
+	}
+
+
+	&__label {
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 500;
+		color: #000;
+		margin-bottom: 5px;
+		transition: color .3s;
+	}
+
+	&__info {
+		font-size: 14px;
+		color: #c0c0c0;
+		font-weight: 300;
+	}
+
+
+}
+
+
+@-webkit-keyframes MOVE-BG {
+  from {
+     transform: translateX(0);
+   }
+
+   to { 
+     transform: translateX(image-width("../images/c-hero--clouds.png")*2);
+   }
+}
+
+
+@-keyframes MOVE-BG {
+	from {
+     transform: translateX(0);
+   }
+
+   to { 
+     transform: translateX(image-width("../images/c-hero--clouds.png")*2);
+   }
+}

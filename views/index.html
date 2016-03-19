@@ -1,0 +1,24 @@
+
+{% extends "./layouts/main.html" %}
+{% block content %}
+{% include "components/hero.html" %}
+<div class="l-container">
+	<div class="u-text-center">
+		<div class="u-mb10">
+			<i class="c-icon c-icon--pine-cone"></i>
+		</div>	
+		<h1 class="c-h1">
+			Любые торжества, спортивные соревнования, <br>корпоративы или отдых с детьми!
+		</h1>
+	</div>
+</div>
+{% include "components/plan.html" %}
+<div class="l-container u-text-center">
+	<h2 class="c-h1">
+		Мы ждем вас в гости <span class="u-green u-underline">с 9:00 до 22:00 без выходных</span>
+	</h2>
+	{% include "components/map.html" %}
+</div>
+{% endblock %}
+{% block pageScripts %}{% endblock %}
+

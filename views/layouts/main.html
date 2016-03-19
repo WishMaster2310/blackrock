@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="База отдыха которую вы искали">
+  <meta name="keywords" content="база отдыха, бани, аренда домиков Нижневартовск">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ ctx.company }}</title>
+  <meta name="theme-color" content="#232a2d" />
+  <meta name="msapplication-navbutton-color" content="#232a2d">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#232a2d">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Черная горка">
+  <meta property="og:url" content="Site URL" />
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fira+Sans:400,300,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="l-page">
+    {% include "../components/header.html" %}
+   
+    {% block content %} {% endblock %}
+    <script src="/javascripts/slick.min.js"></script>
+    <script src="/javascripts/general.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+.c-map {
+	height: image-height('../images/map.png');
+	position: relative;
+	width: 100%;
+
+	&__content {
+		background-color: #fff;
+		position: absolute;
+		z-index: 1;
+		height: 430px;
+		width: 240px;
+		top: 20px;
+		padding: 30px;
+		text-align: left;
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	&__addr {
+		.fontSizer(18, 24);
+		text-align: left;
+		margin-bottom: 30px;
+	}
+
+	&__logo {
+		display: block;
+		max-width: 100%;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+	&__contacts {
+		text-align: left;
+		margin-bottom: 30px;
+
+		small {
+			display: block;
+			font-size: 14px;
+		}
+	}
+
+	&__tel {
+		display: block;
+		.fontSizer(18, 24);
+		font-weight: 500;
+		color: #000;
+		text-decoration: none;
+
+		&:hover {
+			color: @green;
+		}
+	}
+
+	&__yandex {
+		padding-left: 27px;
+		display: block;
+		color: @green;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+			
+		}
+
+		i {
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			left: 0;
+		}
+	}
+}
