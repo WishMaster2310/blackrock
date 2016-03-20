@@ -1,15 +1,56 @@
 {%- extends "./layouts/main.html" -%}
+{%- set advantages = [
+{
+	title: "Спорт",
+	content: "Две большие бани, с уникальным для Урала оборудованием и нефритовыми печами."
+},
+{
+	title: "Ресторан",
+	content: "Вы можете собраться вокруг огня, пожарить мясо на углях или сделать заказ в кафе, а также попеть в караоке. "
+},
+{
+	title: "Детям",
+	content: "По-домашнему вкусная еда, огонь в камине, уютная обстановка – действительно теплая атмосфера для вашего отдыха. "
+},
+{
+	title: "Развлечения",
+	content: "Две большие бани, с уникальным для Урала оборудованием и нефритовыми печами."
+},
+{
+	title: "Зимой",
+	content: "Вы можете собраться вокруг огня, пожарить мясо на углях или сделать заказ в кафе, а также попеть в караоке. "
+},
+{
+	title: "Летом",
+	content: "По-домашнему вкусная еда, огонь в камине, уютная обстановка – действительно теплая атмосфера для вашего отдыха. "
+}
+] -%}
 {%- block content -%}
 <div class="l-top-content">
-	<div class="l-container">
+	<div class="l-container u-text-center">
 		<div class="u-text-center">
-
-			<h1 class="c-h1">
-				Любые торжества, спортивные соревнования, <br>корпоративы или отдых с детьми!
+			<h1 class="c-h1 c-h1--bordered">
+				О базе отдыха
 			</h1>
 		</div>
+		<div class="c-text u-mb30">
+			<p>Две большие бани, с уникальным для Урала оборудованием и нефритовыми печами. Вы можете собраться вокруг огня, пожарить мясо на углях или сделать заказ в кафе, а также попеть в караоке. По-домашнему вкусная еда, огонь в камине, уютная обстановка – действительно теплая атмосфера для вашего отдыха.</p>
+		</div>
+		<div class="u-mt80 u-mb80">
+			{%- set icons = ["mangal", "eat", "swim", "boat", "bycicle", "walley", "sky", "konek", "sani" ] -%}
+			{%- for item in icons %}
+			  <i class="c-icon c-icon--{{ item }}"></i> &nbsp;
+			{% endfor -%}
+		</div>
+		<div class="c-advantage__list">
+			{% for item in advantages %}
+			<div class="c-advantage">
+				<div class="c-advantage__title">{{ item.title }}</div>
+				<div class="c-advantage__text">{{ item.content }}</div>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
-
 </div>
 
 <section class="l-container">

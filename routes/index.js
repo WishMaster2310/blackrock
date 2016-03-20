@@ -11,5 +11,8 @@ router.get('/about', function(req, res, next) {
   res.render('about', { ctx: siteDB})
 });
 
+router.get('/rent', function(req, res, next) {
+  res.render('rent', { ctx: siteDB})
+});
 
 module.exports = router;

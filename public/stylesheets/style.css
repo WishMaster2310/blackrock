@@ -199,6 +199,24 @@ body {
   margin-bottom: 3.125rem;
 }
 .c-h1 {
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+  font-family: 'Bad Script', cursive;
+}
+.c-h1--bordered {
+  border-bottom: 1px solid #dbdbdb;
+}
+.c-text {
+  max-width: 710px;
+  margin: auto;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.556;
+}
+.c-h2 {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.333;
@@ -1422,6 +1440,30 @@ x:-o-prefocus,
   margin-top: -15px;
   left: 0;
 }
+.c-advantage {
+  display: inline-block;
+  vertical-align: top;
+  width: 29.333%;
+  margin: 0 -0.25em 3% 4%;
+}
+.c-advantage__list {
+  margin-left: -4%;
+}
+.c-advantage__title {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.333;
+  font-family: 'Bad Script', cursive;
+  color: #399200;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+.c-advantage__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.429;
+  font-weight: 300;
+}
 .u-clearfix:before,
 .u-clearfix:after {
   content: " ";
@@ -1431,6 +1473,14 @@ x:-o-prefocus,
 .u-mb40 {
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
+}
+.u-mb80 {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
+}
+.u-mt80 {
+  margin-top: 80px;
+  margin-top: 5rem;
 }
 .u-mb30 {
   margin-bottom: 30px;
