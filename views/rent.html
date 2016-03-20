@@ -1,11 +1,63 @@
 {%- extends "./layouts/main.html" -%}
+{%- set rent = [
+	{
+		"title": "Домики <br>одноэтажные",
+		"url": "odnojetazhnye_doma",
+		"img": "c-hero--h1.png",
+		"info": "до 12 человек",
+		"price": ["от 900 руб./час", "от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг), средство для розжига, специальная «махалка» для раздувания огня, фарфоровая посуда."
+	},
+	{
+		"title": "Баня <br>одноэтажная",
+		"url": "banja_odnojetazhnaja",
+		"img": "c-hero--h2.png",
+		"info": "до 10 человек",
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 6:00 до 18:00 – 1 900 руб./час", "Cутки (24 часа) – 24 000 руб.", "Минимальный заказ – 3 часа"],
+		"include": "В стоимость входит: 6 халатов, 6 наборов, шапки и варежки."
+	},
+	{
+		"title": "Коттеджи <br>двухэтажные",
+		"url": "kottedzhi",
+		"img": "c-hero--h4.png",
+		"info": "до 30 человек",
+		"price": ["от 900 руб./час", "от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг), средство для розжига, специальная «махалка» для раздувания огня, фарфоровая посуда."
+	},
+	{
+		"title": "Коттеджи <br>двухэтажные",
+		"url": "bani_s_biljardom",
+		"img": "c-hero--h5.png",
+		"info": "до 12 человек",
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", " с 18:00 до 06:00 – 2 100 руб./час", "Cутки (24 часа) – 24 000 руб.", "Минимальный заказ – 3 часа"],
+		"include": "В стоимость входит: 6 халатов, 6 наборов, шапки и варежки."
+	}				
+] -%}
 {%- block content -%}
 <div class="l-top-content">
 	<div class="l-container u-text-center">
-		<div class="u-text-center">
-			<h1 class="c-h1 c-h1--bordered">
-				Аренда домиков
-			</h1>
+		<h1 class="c-h1 c-h1--bordered">Аренда домиков</h1>
+
+		<div class="c-rent">
+			<div class="c-rent__inner">
+			{% for item in rent %}
+				<a href="/{{ item.url }}" class="c-rent__item">
+					<div class="c-rent__img">
+						<img src="/images/{{ item.img }}" alt="">
+					</div>
+					<div class="c-rent__data">
+						<div class="c-rent__name">{{ item.title|safe }}</div>
+						<div class="c-rent__info">{{ item.info }}</div>
+						<div class="c-rent__price">
+						{%- for p in item.price %}
+							<div>{{ p }}</div>
+						{% endfor -%}
+						</div>
+						<div class="c-rent__include">{{ item.include }}</div>
+					</div>
+				</a>				
+			{% endfor %}
+			</div>
 		</div>
 	</div>
 </div>

@@ -12,6 +12,11 @@
 		margin-top: -(image-height("../images/plan.png")/2)
 	}
 
+	&--rent &__bg,
+	&--rent &__unit{
+		opacity: .5
+	}
+
 	&__container {
 		position: relative;
 		.clearfix();
@@ -39,38 +44,100 @@
 
 	&__unit {
 		position: absolute;
+		
+		&:after {
+			left: 50%;
+			display: block;
+			border: 3px solid @green;
+			position: absolute;
+			top: 50%;
+			border-radius: 50%;
+		}
+
 		&-content {
 			display: none;
+		}
+
+		&--active {
+			opacity: 1 !important;
+
+			&:after {
+				content: ""
+			}
 		}
 
 		&--type-1 {
 			width: image-width("../images/__icons/plan-1.png");
 			height: image-height("../images/__icons/plan-1.png");
+
+			&:after {
+				width: 40px;
+				height: 40px;
+				margin-top: -20px;
+				margin-left: -20px;
+			}
 		}
 
 		&--type-2 {
 			width: image-width("../images/__icons/plan-2.png");
 			height: image-height("../images/__icons/plan-2.png");
+
+			&:after {
+				width: 60px;
+				height: 60px;
+				margin-top: -30px;
+				margin-left: -30px;
+			}
 		}
 
 		&--type-3 {
 			width: image-width("../images/__icons/plan-3.png");
 			height: image-height("../images/__icons/plan-3.png");
+
+			&:after {
+				width: 60px;
+				height: 60px;
+				margin-top: -30px;
+				margin-left: -30px;
+			}
+
+
 		}
 
 		&--type-4 {
 			width: image-width("../images/__icons/plan-4.png");
 			height: image-height("../images/__icons/plan-4.png");
+
+			&:after {
+				width: 60px;
+				height: 60px;
+				margin-top: -30px;
+				margin-left: -30px;
+			}
 		}
 
 		&--type-5 {
 			width: image-width("../images/__icons/plan-5.png");
 			height: image-height("../images/__icons/plan-5.png");
+
+			&:after {
+				width: 70px;
+				height: 70px;
+				margin-top: -35px;
+				margin-left: -35px;
+			}
 		}
 
 		&--type-6 {
-			width: image-width("../images/__icons/plan-5.png");
-			height: image-height("../images/__icons/plan-5.png");
+			width: image-width("../images/__icons/plan-6.png");
+			height: image-height("../images/__icons/plan-6.png");
+
+			&:after {
+				width: 100px;
+				height: 100px;
+				margin-top: -50px;
+				margin-left: -50px;
+			}
 		}
 
 
@@ -149,4 +216,30 @@
 
 
 	}	
+
+
+	&__tip {
+
+		&-img {
+			margin-bottom: 20px;
+			img {
+				max-width: 100%;
+				border-radius: 6px;
+				display: block;
+				
+			}
+		}
+		&-title {
+			font-weight: 500;
+			margin-bottom: 10px;
+			color: #000;
+			font-size: 14px;
+		}
+
+		&-text {
+			color: #000;
+			font-size: 14px;
+			font-weight: 300;
+		}
+	}
 }

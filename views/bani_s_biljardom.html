@@ -1,0 +1,41 @@
+{%- extends "./layouts/main.html" -%} 
+{% set gallery = [
+"7432f529498401.jpg", "b6bb5a26191519.jpg", "c2a1ff26191519.jpg", "869f6726191519.jpg", "2799eb26191519.jpg"
+] %}
+{%- block content -%}
+<div class="l-top-content l-top-content--arrowed">
+  <div class="l-container u-text-center">
+    <h1 class="c-h1 c-h1--bordered">Баня одноэтажная</h1>
+    <div class="l-row">
+      <div class="l-col">
+        <div class="c-gallery">
+        	<div class="c-gallery__view">
+        		<div class="c-gallery__view-bg"></div>
+        	</div>
+        	<div class="c-gallery__list">
+        	{% for item in gallery %}
+        		<div class="c-gallery__list-item" data-src="images/{{ item }}" style="background-image: url(images/small__{{ item }})">
+        		</div>
+        	{% endfor %}
+        	</div>
+        </div>
+      </div>
+      <div class="l-col">
+        <div class="l-content">
+          <p>Для маленькой компании, а также для средней компании и для большой компании, у нас есть…  нет, не огромный такой секрет (как в известной песенке), а Гриль-Домики – маленькие, средние и большие. Собраться с семьей, друзьями или коллегами вокруг очага, отдыхать, общаться на приятные темы  – отличное занятие</p>
+          <p><strong>с 6:00 до 18:00 – 1 900 руб./час<br>с 18:00 до 06:00 – 2 100 руб./час<br>Cутки (24 часа) – 24 000 руб. <br>Минимальный заказ – 3 часа</strong></p>
+          <p>В стоимость входит: 6 халатов, 6 наборов, шапки и варежки.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="l-container">
+  {%- include "components/plan-rent.html" %}
+</section>
+{%- endblock %} {%- block pageScripts %}
+<script>
+  $(function() {
+    $('.c-plan__unit[data-position=5-3]').addClass('c-plan__unit--active')
+  })
+</script>{% endblock -%}

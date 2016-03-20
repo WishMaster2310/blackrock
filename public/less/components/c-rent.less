@@ -1,0 +1,83 @@
+.c-rent {
+	
+	position: relative;
+	&:before {
+		display: block;
+		height: 200px;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: url(../images/rentbg.png) no-repeat 50% bottom;
+	}
+
+	&__inner {
+		display: table;
+		width: 100%;
+		table-layout: fixed;	
+	}
+
+	&__item {
+		display: table-cell;
+		vertical-align: top;
+		text-decoration: none;
+		color: inherit;
+			
+	}
+
+	&__item:last-child &__data {
+		border-right: 0;
+	}
+
+	&__item:hover &__name {
+		color: @green;
+	}
+
+	&__data {
+		border-right: 1px solid #dbdbdb;
+		min-height: 290px;
+		padding: 0 20px
+	}
+
+	&__name {
+		.fontSizer(18, 24);
+		font-weight: 500;
+		margin-bottom: 5px;
+	}
+
+	&__include {
+		font-size: 14px;
+		.fontSizer(14, 20);
+		font-weight: 300;
+	}
+
+	&__info {
+		font-size: 14px;
+		font-weight: 300;
+		margin-bottom: 20px;
+	}
+
+	&__price {
+		.fontSizer(14, 20);
+		font-weight: 300;
+		.remMb(20)
+	}
+
+	&__img {
+		position: relative;
+		text-align: center;
+		margin-bottom: 20px;
+		height: 200px;
+
+		img {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}

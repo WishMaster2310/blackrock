@@ -15,4 +15,18 @@ router.get('/rent', function(req, res, next) {
   res.render('rent', { ctx: siteDB})
 });
 
+router.get('/odnojetazhnye_doma', function(req, res, next) {
+  res.render('odnojetazhnye_doma', { ctx: siteDB})
+});
+
+router.get('/banja_odnojetazhnaja', function(req, res, next) {
+  res.render('banja_odnojetazhnaja', { ctx: siteDB})
+});
+router.get('/kottedzhi', function(req, res, next) {
+  res.render('kottedzhi', { ctx: siteDB})
+});
+
+router.get('/bani_s_biljardom', function(req, res, next) {
+  res.render('bani_s_biljardom', { ctx: siteDB})
+});
 module.exports = router;
