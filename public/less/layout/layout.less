@@ -15,6 +15,9 @@ body {
 	min-width: @base-width;
 	height: 100%;
 }
+a {
+	color: @blue;
+}
 
 .l-container {
 	width: 1010px;
@@ -27,6 +30,8 @@ body {
 		min-width: @base-width;
 		width: auto;
 	}
+
+	
 }
 
 .l-row {
@@ -53,6 +58,10 @@ body {
 	padding-right: 15px;
 	min-height: 1px;
 	position: relative;
+
+	&--1of3 {
+		width: 33.333%;
+	}
 }
 .l-content {
 	text-align: left;
@@ -128,4 +137,43 @@ body {
 .c-icon {
 	display: inline-block;
 	background-image: data-uri("../images/c-icon-sprite.png");
+}
+
+.c-contacts-text {
+	.fontSizer(18, 28);
+	.remMb(20)
+}
+
+@media (min-width: 761px) and (max-width: 1023px)  {
+	body {
+		min-width: 760px;
+	}
+	.l-container {
+		width: 760px;
+	}
+}
+
+@media (max-width: 760px){
+	body {
+		min-width: 320px;
+	}
+	.l-container {
+		width: 320px;
+	}
+	.c-h1 {
+		.fontSizer(32, 45);
+		.remMb(20);
+	}
+
+	.c-h2 {
+		.fontSizer(24, 28);
+		.remMb(20);
+		font-family: @cursive-font-family;
+	}
+
+	.c-text {
+		max-width: 710px;
+		margin: auto;
+		.fontSizer(16, 20)
+	}
 }

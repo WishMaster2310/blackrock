@@ -1,0 +1,32 @@
+{%- extends "./layouts/main.html" -%}
+
+{%- block content -%}
+<div class="l-top-content">
+	<div class="l-container u-text-center">
+		<h1 class="c-h1 c-h1--bordered">Как с нами связаться</h1>
+		<div class="l-row">
+			<div class="l-col l-col--1of3">
+				<div class="c-contacts-text">+7 (3466) 499-204 <br>
+					<a href="chernayagorka@yandex.ru">chernayagorka@yandex.ru</a>
+				</div>
+			</div>
+			<div class="l-col l-col--1of3">
+				<div class="c-contacts-text">Нижневартовск — Радужный, <br>Автодорога, 1Б <br>
+					<a target="_blank" href="https://maps.yandex.ru/-/CVHK4U9r">Показать на Яндекс-карте</a>
+				</div>
+
+			</div>
+			<div class="l-col l-col--1of3">
+				<div class="c-contacts-text">Мы ждем гостей <br> с 9:00 до 0:00 без выходных
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="l-container">
+	{%- include "components/map--contacts.html" %}
+</section>
+
+{%- endblock %}
+{%- block pageScripts %}{% endblock -%}

@@ -29,4 +29,8 @@ router.get('/kottedzhi', function(req, res, next) {
 router.get('/bani_s_biljardom', function(req, res, next) {
   res.render('bani_s_biljardom', { ctx: siteDB})
 });
+
+router.get('/contacts', function(req, res, next) {
+  res.render('contacts', { ctx: siteDB})
+});
 module.exports = router;

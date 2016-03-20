@@ -73,8 +73,8 @@
 			&:after {
 				width: 40px;
 				height: 40px;
-				margin-top: -20px;
-				margin-left: -20px;
+				margin-top: -22px;
+				margin-left: -22px;
 			}
 		}
 
@@ -111,8 +111,8 @@
 			&:after {
 				width: 60px;
 				height: 60px;
-				margin-top: -30px;
-				margin-left: -30px;
+				margin-top: -32px;
+				margin-left: -32px;
 			}
 		}
 
@@ -124,7 +124,7 @@
 				width: 70px;
 				height: 70px;
 				margin-top: -35px;
-				margin-left: -35px;
+				margin-left: -38px;
 			}
 		}
 
@@ -241,5 +241,43 @@
 			font-size: 14px;
 			font-weight: 300;
 		}
+	}
+}
+
+@media (max-width: 1023px) { 
+	.c-plan {
+		
+		&__container {
+			position: relative;
+			.clearfix();
+
+			.c-adds {
+				float: none;
+				margin: 0 auto;
+				width: 300px;
+
+			}
+
+			.c-adds__content {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+
+		&--abs {
+			position: relative;
+			right: auto;
+			top: auto;
+			margin-top: 0;
+		}
+
+	}
+
+}
+
+@media (max-width: 760px){
+	.c-plan {
+		display: none;
+		
 	}
 }
