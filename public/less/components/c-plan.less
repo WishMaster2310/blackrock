@@ -1,0 +1,152 @@
+.c-plan {
+	width: image-width("../images/plan.png");
+	height: image-height("../images/plan.png");
+	//background: url(../images/plan.png) no-repeat 50% 50%;
+	position: relative;
+	margin: auto;
+
+	&--abs {
+		position: absolute;
+		right: 360px;
+		top: 50%;
+		margin-top: -(image-height("../images/plan.png")/2)
+	}
+
+	&__container {
+		position: relative;
+		.clearfix();
+
+		.c-adds {
+			float: right;
+		}
+	}
+
+	&__wrapper {
+		overflow: hidden;
+	}
+
+	&__bg {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/plan.png) no-repeat 50% 50%;
+	}
+
+	&__unit {
+		position: absolute;
+		&-content {
+			display: none;
+		}
+
+		&--type-1 {
+			width: image-width("../images/__icons/plan-1.png");
+			height: image-height("../images/__icons/plan-1.png");
+		}
+
+		&--type-2 {
+			width: image-width("../images/__icons/plan-2.png");
+			height: image-height("../images/__icons/plan-2.png");
+		}
+
+		&--type-3 {
+			width: image-width("../images/__icons/plan-3.png");
+			height: image-height("../images/__icons/plan-3.png");
+		}
+
+		&--type-4 {
+			width: image-width("../images/__icons/plan-4.png");
+			height: image-height("../images/__icons/plan-4.png");
+		}
+
+		&--type-5 {
+			width: image-width("../images/__icons/plan-5.png");
+			height: image-height("../images/__icons/plan-5.png");
+		}
+
+		&--type-6 {
+			width: image-width("../images/__icons/plan-5.png");
+			height: image-height("../images/__icons/plan-5.png");
+		}
+
+
+		&[data-position="1-1"] {
+			left: 480px;
+			top: 389px;
+		}
+
+		&[data-position="1-2"] {
+			left: 475px;
+    	top: 366px;
+		}
+
+		&[data-position="1-3"] {
+			left: 471px;
+			top: 344px;
+		}
+
+		&[data-position="1-4"] {
+			left: 467px;
+			top: 322px;
+		}
+		&[data-position="1-5"] {
+			left: 457px;
+			top: 295px;
+		}
+		&[data-position="1-6"] {
+			left: 460px;
+	    top: 265px;
+	    transform: rotateZ(12deg);
+		}
+
+		&[data-position="2-1"] {
+			left: 437px;
+			top: 220px;
+		}
+
+		&[data-position="3-1"] {
+			left: 535px;
+			top: 179px;
+		}
+
+		&[data-position="3-2"] {
+			left: 461px;
+			top: 158px;
+			transform: rotateZ(34deg);
+		}
+
+		&[data-position="4-1"] {
+			left: 571px;
+			top: 172px;
+		}
+
+		&[data-position="4-2"] {
+			left: 492px;
+			top: 173px;
+		}
+
+		&[data-position="5-1"] {
+			left: 558px;
+			top: 53px;
+		}
+		&[data-position="5-2"] {
+			left: 508px;
+    	top: 48px;
+		}
+		&[data-position="5-3"] {
+			left: 463px;
+	    top: 50px;
+	    transform: rotateZ(-23deg);
+		}
+		&[data-position="6-1"] {
+			left: 644px;
+			top: 218px;
+		}
+
+
+	}	
+}

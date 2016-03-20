@@ -7,5 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { ctx: siteDB})
 });
 
+router.get('/about', function(req, res, next) {
+  res.render('about', { ctx: siteDB})
+});
+
 
 module.exports = router;

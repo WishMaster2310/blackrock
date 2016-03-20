@@ -19,5 +19,20 @@
 				<i class="c-icon c-icon--bird1"></i>
 			</div>
 		</div>
+		<div class="c-plan c-plan--abs">
+			<div class="c-plan__bg"></div>
+			<div class="c-plan__objects">
+				{%- for obj in ctx.plan %}
+					<div data-position="{{ obj.type }}-{{ obj.pos }}" class="c-plan__unit c-plan__unit--type-{{ obj.type }}">
+						<div class="c-icon c-icon--plan-{{ obj.type }}"></div>
+						<div class="c-plan__unit-content">
+							<div><img src="/images/{{ obj.img }}" alt=""></div>
+							<div>{{ obj.title }}</div>
+							<div>{{ obj.text }}</div>
+						</div>
+					</div>
+				{% endfor -%}
+			</div>
+		</div>
 	</div>
 </div>
