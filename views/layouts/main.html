@@ -8,20 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ ctx.company }}</title>
-  <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="fav/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
-  <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ ctx.static_path }}/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ ctx.static_path }}/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ ctx.static_path }}/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ ctx.static_path }}/fav/apple-icon-120x120.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ ctx.static_path }}/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ ctx.static_path }}/fav/favicon-96x96.png">
+  <meta name="msapplication-TileImage" content="{{ ctx.static_path }}/fav/ms-icon-144x144.png">
   <meta name="theme-color" content="#41a600" />
   <meta name="msapplication-navbutton-color" content="#41a600">
   <meta name="apple-mobile-web-app-status-bar-style" content="#41a600">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Черная горка">
   <meta property="og:url" content="Site URL" />
-  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="{{ ctx.static_path }}/stylesheets/style.css">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fira+Sans:400,300,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <!--[if lt IE 9]>
@@ -35,9 +35,9 @@
     {% include "../components/header.html" %}
     {% block content %} {% endblock %}
     {% include "../components/footer.html" %}
-    <script src="/javascripts/jquery.qtip.min.js"></script>
-    <script src="/javascripts/slick.min.js"></script>
-    <script src="/javascripts/general.js"></script>
+    <script src="{{ ctx.static_path }}/javascripts/jquery.qtip.min.js"></script>
+    <script src="{{ ctx.static_path }}/javascripts/slick.min.js"></script>
+    <script src="{{ ctx.static_path }}/javascripts/general.js"></script>
     {% block pageScripts %}{% endblock  %}
 </body>
 

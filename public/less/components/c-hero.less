@@ -134,6 +134,40 @@
 		color: #c0c0c0;
 		font-weight: 300;
 	}
+
+	&__decor {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 140px;
+		height: 111px;
+
+		&-cloud {
+			top: 63px;
+			left: 0;
+			position: absolute;
+			width: image-width("../images/c-hero--cloud.png");
+			height: image-height("../images/c-hero--cloud.png");
+			background: url(../images/c-hero--cloud.png) no-repeat center center;
+		}
+
+		&-bird {
+			width: image-width("../images/__icons/bird.png");
+			height: image-height("../images/__icons/bird.png");
+			position: absolute;
+			top: 36px;
+			left: 38px;
+		}
+
+		&-tip {
+			width: image-width("../images/c-hero__decor-tip.png");
+			height: image-height("../images/c-hero__decor-tip.png");
+			position: absolute;
+			background: url("../images/c-hero__decor-tip.png") no-repeat center top;
+			top: 0;
+			left: -20px;
+		}
+	}
 }
 
 
@@ -141,6 +175,11 @@
 	.c-hero {
 		&__container {
 			height: auto;
+		}
+
+		&__decor {
+			display: none;
+			
 		}
 		&__flag {
 			display: none;

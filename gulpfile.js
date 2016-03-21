@@ -13,7 +13,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var siteDB = require('./datasource/sdata.json');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 var LessPluginCleanCSS = require('less-plugin-clean-css');
-
+siteDB.static_path = "public"
 gulp.task('less:dev', function() {
     var autoprefix = new LessPluginAutoPrefix({
       browsers: ["last 2 versions"]
