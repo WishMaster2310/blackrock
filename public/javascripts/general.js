@@ -32,6 +32,19 @@ $(function() {
     }
   });
 
+  $('.j-showintro').on('click', function(e) {
+      e.preventDefault();
+      $(this).hide();
+      $('.c-intro').slideDown(600)
+  });
+
+  $('.c-intro__footer a').on('click', function(e) {
+      e.preventDefault();
+      $('.j-showintro').show();
+      $('.c-intro').slideUp(600)
+  });
+
+
   if($(".c-gallery__list-item").length > 0) {
     var img = $(".c-gallery__list-item").first().attr('data-src');
     $(".c-gallery__view-bg").css({"backgroundImage": "url("+img+")"});

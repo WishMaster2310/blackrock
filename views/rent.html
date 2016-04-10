@@ -1,59 +1,167 @@
 {%- extends "./layouts/main.html" -%}
-{%- set rent = [
+{%- set rent1 = [
 	{
-		"title": "Домики <br>одноэтажные",
+		"title": "Дом одноэтажный <br>№1, 2",
 		"url": "odnojetazhnye_doma",
-		"img": "c-hero--h1.png",
+		"img": "h1.png",
 		"info": "до 12 человек",
-		"price": ["от 900 руб./час", "от 7200 руб./день**"],
-		"include": "В стоимость входит: уголь для мангала (3 кг), средство для розжига, специальная «махалка» для раздувания огня, фарфоровая посуда."
+		"price": ["от 900 руб./час, от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг)."
 	},
 	{
-		"title": "Баня <br>одноэтажная",
+		"title": "Дом одноэтажный <br>№3, 4",
 		"url": "banja_odnojetazhnaja",
-		"img": "c-hero--h2.png",
+		"img": "h2.png",
 		"info": "до 10 человек",
-		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 6:00 до 18:00 – 1 900 руб./час", "Cутки (24 часа) – 24 000 руб.", "Минимальный заказ – 3 часа"],
-		"include": "В стоимость входит: 6 халатов, 6 наборов, шапки и варежки."
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 18:00 до 06:00 – 2 100 руб./час"],
+		"include": "Cутки (24 часа) – 24 000 руб.<br> Минимальный заказ – 3 часа"
 	},
 	{
-		"title": "Коттеджи <br>двухэтажные",
+		"title": "Дом одноэтажный <br>№5, 6",
 		"url": "kottedzhi",
-		"img": "c-hero--h4.png",
+		"img": "h3.png",
 		"info": "до 30 человек",
-		"price": ["от 900 руб./час", "от 7200 руб./день**"],
-		"include": "В стоимость входит: уголь для мангала (3 кг), средство для розжига, специальная «махалка» для раздувания огня, фарфоровая посуда."
+		"price": ["от 900 руб./час, от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг)."
 	},
 	{
-		"title": "Бани с бильярдом на&nbsp;берегу озера",
+		"title": "Сауна <br>одноэтажная",
 		"url": "bani_s_biljardom",
-		"img": "c-hero--h5.png",
+		"img": "h4.png",
 		"info": "до 12 человек",
-		"price": ["с 6:00 до 18:00 – 1 900 руб./час", " с 18:00 до 06:00 – 2 100 руб./час", "Cутки (24 часа) – 24 000 руб.", "Минимальный заказ – 3 часа"],
-		"include": "В стоимость входит: 6 халатов, 6 наборов, шапки и варежки."
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 18:00 до 06:00 – 2 100 руб./час"],
+		"include": "Cутки (24 часа) – 24 000 руб. Минимальный заказ – 3 часа"
+	}				
+] -%}
+{%- set rent2 = [
+	{
+		"title": "Кафе",
+		"url": "odnojetazhnye_doma",
+		"img": "h5.png",
+		"info": "до 12 человек",
+		"price": ["от 900 руб./час, от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг)."
+	},
+	{
+		"title": "Коттедж №1",
+		"url": "banja_odnojetazhnaja",
+		"img": "h6.png",
+		"info": "до 10 человек",
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 18:00 до 06:00 – 2 100 руб./час"],
+		"include": "Cутки (24 часа) – 24 000 руб.<br> Минимальный заказ – 3 часа"
+	},
+	{
+		"title": "Коттедж №2",
+		"url": "kottedzhi",
+		"img": "h7.png",
+		"info": "до 30 человек",
+		"price": ["от 900 руб./час, от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг)."
+	},
+	{
+		"title": "Коттедж №3",
+		"url": "bani_s_biljardom",
+		"img": "h8.png",
+		"info": "до 12 человек",
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 18:00 до 06:00 – 2 100 руб./час"],
+		"include": "Cутки (24 часа) – 24 000 руб. Минимальный заказ – 3 часа"
+	}				
+] -%}
+{%- set rent3 = [
+	{
+		"title": "Баня на озере <br>№1",
+		"url": "odnojetazhnye_doma",
+		"img": "h9.png",
+		"info": "до 12 человек",
+		"price": ["от 900 руб./час, от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг)."
+	},
+	{
+		"title": "Баня на озере <br>№2",
+		"url": "banja_odnojetazhnaja",
+		"img": "h10.png",
+		"info": "до 10 человек",
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 18:00 до 06:00 – 2 100 руб./час"],
+		"include": "Cутки (24 часа) – 24 000 руб.<br> Минимальный заказ – 3 часа"
+	},
+	{
+		"title": "Баня на озере <br>№3",
+		"url": "kottedzhi",
+		"img": "h11.png",
+		"info": "до 30 человек",
+		"price": ["от 900 руб./час, от 7200 руб./день**"],
+		"include": "В стоимость входит: уголь для мангала (3 кг)."
+	},
+	{
+		"title": "Банкетный зал <br>с бильярдом",
+		"url": "bani_s_biljardom",
+		"img": "h12.png",
+		"info": "до 12 человек",
+		"price": ["с 6:00 до 18:00 – 1 900 руб./час", "с 18:00 до 06:00 – 2 100 руб./час"],
+		"include": "Cутки (24 часа) – 24 000 руб. Минимальный заказ – 3 часа"
 	}				
 ] -%}
 {%- block content -%}
 <div class="l-top-content">
 	<div class="l-container u-text-center">
 		<h1 class="c-h1 c-h1--bordered">Аренда домиков</h1>
-
 		<div class="c-rent">
 			<div class="c-rent__inner">
-			{% for item in rent %}
+			{% for item in rent1 %}
 				<a href="/{{ item.url }}" class="c-rent__item">
 					<div class="c-rent__img">
-						<img src="/images/{{ item.img }}" alt="">
+						<img src="/images/houses/{{ item.img }}" alt="">
 					</div>
 					<div class="c-rent__data">
 						<div class="c-rent__name">{{ item.title|safe }}</div>
-						<div class="c-rent__info">{{ item.info }}</div>
 						<div class="c-rent__price">
 						{%- for p in item.price %}
 							<div>{{ p }}</div>
 						{% endfor -%}
 						</div>
-						<div class="c-rent__include">{{ item.include }}</div>
+						<div class="c-rent__include">{{ item.include|safe }}</div>
+					</div>
+				</a>				
+			{% endfor %}
+			</div>
+		</div>
+
+		<div class="c-rent c-rent--bg2">
+			<div class="c-rent__inner">
+			{% for item in rent2 %}
+				<a href="/{{ item.url }}" class="c-rent__item">
+					<div class="c-rent__img">
+						<img src="/images/houses/{{ item.img }}" alt="">
+					</div>
+					<div class="c-rent__data">
+						<div class="c-rent__name">{{ item.title|safe }}</div>
+						<div class="c-rent__price">
+						{%- for p in item.price %}
+							<div>{{ p }}</div>
+						{% endfor -%}
+						</div>
+						<div class="c-rent__include">{{ item.include|safe }}</div>
+					</div>
+				</a>				
+			{% endfor %}
+			</div>
+		</div>
+
+		<div class="c-rent c-rent--bg3">
+			<div class="c-rent__inner">
+			{% for item in rent3 %}
+				<a href="/{{ item.url }}" class="c-rent__item">
+					<div class="c-rent__img">
+						<img src="/images/houses/{{ item.img }}" alt="">
+					</div>
+					<div class="c-rent__data">
+						<div class="c-rent__name">{{ item.title|safe }}</div>
+						<div class="c-rent__price">
+						{%- for p in item.price %}
+							<div>{{ p }}</div>
+						{% endfor -%}
+						</div>
+						<div class="c-rent__include">{{ item.include|safe }}</div>
 					</div>
 				</a>				
 			{% endfor %}

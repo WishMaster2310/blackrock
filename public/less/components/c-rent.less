@@ -1,6 +1,7 @@
 .c-rent {
 	
 	position: relative;
+	
 	&:before {
 		display: block;
 		height: 200px;
@@ -9,7 +10,15 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		background: url(../images/rentbg.png) no-repeat 50% bottom;
+		background: url(../images/houses/housesbg1.png) no-repeat 50% bottom;
+	}
+
+	&--bg3::before  {
+		background-image: url(../images/houses/housesbg3.png);
+	}
+
+	&--bg2::before  {
+		background-image: url(../images/houses/housesbg2.png);
 	}
 
 	&__inner {
@@ -35,15 +44,15 @@
 	}
 
 	&__data {
-		border-right: 1px solid #dbdbdb;
-		min-height: 290px;
-		padding: 0 20px
+		//border-right: 1px solid #dbdbdb;
+		min-height: 200px;
+		padding: 0 15px
 	}
 
 	&__name {
 		.fontSizer(18, 24);
 		font-weight: 500;
-		margin-bottom: 5px;
+		margin-bottom: 15px;
 	}
 
 	&__include {
